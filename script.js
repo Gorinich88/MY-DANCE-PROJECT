@@ -14,4 +14,3 @@
         prevEl: ".swiper-button-prev",
       },
     });
-  

@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="script.js" defer></script>
+  <script src="jquery.js" defer></script>
   <title>MY Dance</title>
 </head>
 <body>
@@ -73,7 +75,7 @@
         <div class="swiper-pagination"></div>
         <div class="banner_content">
           <p class="banner_text">My Dance for You! If You wanted amazing and bright show, follow the link and fill out the form?!</p>
-          <button href="#" class="btn btn_banner">Fill the Form</button>
+          <button class="btn btn_banner" onclick="forma()">Fill the Form</button>
         </div>
       </div>
     </main>
@@ -143,6 +145,20 @@
         </div>
       </div>
     </footer>
+    <div class="popups_inner">
+      <div class="popup callme_popup">
+        <a class="close_popup">x</a>
+        <h3 class="title_form">Recall me</h3>
+        <p class="text_form">Send your massege and we call you</p>
+        <form>
+          <input type="text" name="name" placeholder="Your name">
+          <input type="text" name="name" placeholder="Your number phone">
+          <input type="text" name="name" placeholder="Your E-mail">
+          <input type="text" name="name" placeholder="What do you wanted see in your holliday?">
+          <input class="btn_form" type="submit" value="Send">
+        </form>
+      </div>
+    </div>
   </div>
 </body>
 </html>
