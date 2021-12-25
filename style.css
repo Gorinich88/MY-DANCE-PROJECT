@@ -70,7 +70,7 @@ svg {
 html,
 .picture_swiper {
   position: relative;
-  height: 625px;
+  /* height: 300px; */
 }
 
 .picture_swiper {
@@ -80,6 +80,7 @@ html,
   color: #000;
   margin: 0;
   padding: 0;
+  height: 625px;
 }
 
 .swiper {
@@ -114,6 +115,7 @@ html,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* object-position: top; */
 }
 .banner_content {
   padding: 33px 64px 56px 67px;
