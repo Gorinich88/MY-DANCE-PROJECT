@@ -119,9 +119,25 @@ html,
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  /* object-position: top; */
-
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.swiper-slide-picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .banner_content {
   padding: 33px 64px 56px 67px;
@@ -334,6 +350,20 @@ color: #EFCC70;
   padding: 0%;
   border: 0px solid #f1f1f1;
 }
+}
+
+.flex_slide_movie {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  margin: 0;
+}
+.flex_slide_movie iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .flex-slide {
