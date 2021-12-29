@@ -125,19 +125,7 @@ html,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-}
-.swiper-slide-picture img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  /* object-position: center; */
 }
 .banner_content {
   padding: 33px 64px 56px 67px;
@@ -365,6 +353,73 @@ color: #EFCC70;
   height: 100%;
   object-fit: cover;
 }
+
+.contemp1 img {
+  width: 40%;
+  height: 40%;
+  padding-top: 30px;
+}
+/* popup1 */
+.picture1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 5%;
+}
+.picture1 img {
+  margin: 0;
+  padding: 0;
+  width: 40%;
+  height: 40%;
+}
+.popup1 {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 10;
+}
+.popup1:target {
+  opacity: 1;
+  visibility: visible;
+}
+.popup1_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pad: 30px 10px;
+}
+.popup1_content {
+  background-color: #fff;
+  color: #000;
+  max-width: 900px;
+  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.popup1_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+}
+.poup1_title {
+  font-size: 30px;
+  margin: 0px 0px 10px 0px;
+
+}
+
 
 .flex-slide {
   -webkit-flex: 1;
