@@ -282,13 +282,13 @@ color: #EFCC70;
 @media screen and (max-width: 768px) {
   .banner_text {
     max-width: 100%;
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 12px;
+    line-height: 26px;
     font-weight: 300;
     color: #fff;
   }
   .btn {
-    width: 180px;
+    width: 140px;
     height: 45px;
     background-color: #EFCC70;
     opacity: 0.8;
@@ -301,6 +301,11 @@ color: #EFCC70;
     text-align: center;
     transition: 0.2s linear;
     font-size: 16px;
+  }
+  .btn_banner {
+    position: absolute;
+    right: 84px;
+    bottom: 35px;
   }
 
 }
@@ -369,13 +374,13 @@ color: #EFCC70;
   .about_us_text {
     max-width: 80%;
     text-align: center;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 14px;
+    line-height: 20px;
     font-weight: 300;
     color: #fff;
   }
   .slide_movie {
-    height: 300px;
+    height: 100%;
     text-align: center;
     font-size: 18px;
     padding-top: 20px;
