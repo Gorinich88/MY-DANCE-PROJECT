@@ -281,7 +281,7 @@ color: #EFCC70;
 
 @media screen and (max-width: 768px) {
   .banner_text {
-    max-width: 90%;
+    max-width: 70%;
     font-size: 12px;
     line-height: 20px;
     font-weight: 300;
@@ -362,7 +362,7 @@ color: #EFCC70;
 
 @media screen and (max-width: 768px) {
   .about_us_header {
-    height: 50%;
+    height: 25%;
     padding: 14px 14px 15px 75px;
     background-color: rgba(0, 0, 0, .7);
     position: absolute;
