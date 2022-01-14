@@ -281,11 +281,13 @@ color: #EFCC70;
 
 @media screen and (max-width: 768px) {
   .banner_text {
-    max-width: 70%;
+    max-width: 100%;
+    padding-bottom: 30px;
     font-size: 12px;
     line-height: 20px;
     font-weight: 300;
     color: #fff;
+    text-align: center;
   }
   .btn {
     width: 140px;
@@ -304,7 +306,7 @@ color: #EFCC70;
   }
   .btn_banner {
     position: absolute;
-    right: 64px;
+    right: 130px;
     bottom: 30px;
   }
 
