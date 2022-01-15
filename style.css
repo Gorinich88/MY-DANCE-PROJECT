@@ -928,6 +928,21 @@ footer {
   text-decoration: none;
   font-family: Neue;
 }
+@media screen and (max-width: 768px) {
+  .social_icon {
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin-top: 75px;
+    margin-left: 85px;
+    /* margin-right: 60px;
+    margin-bottom: 25px; */
+    /* padding-right: 55px;
+    padding-bottom: 25px; */
+  }
+}
+
+
 /*Form*/
 .popups_inner {
   margin: 20px;
@@ -1000,4 +1015,46 @@ input {
 }
 .closed_icon {
   background-color: #014743;
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #014743;
+    padding: 15px 0px;
+    border-radius: 15px;
+    position: relative;
+    border: 4px solid #000;
+    
+  }
+  .title_form {
+    color: #fff;
+    font-family: Neue;
+    font-size: 18px;
+    margin: 0;
+    padding-top: 20px;
+  }
+  .text_form {
+    color: #EFCC70;
+    font-family: Neue;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
+  input {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px 25px;
+  }
+  .btn_form {
+    color: #014743;
+    background-color: #EFCC70;
+    font-size: 22px;
+  }
 }
