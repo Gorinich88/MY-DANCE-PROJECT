@@ -12,6 +12,9 @@
   crossorigin="anonymous" defer></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/2.2.0/jquery.waitforimages.min.js" defer></script> 
+  <script src="jquery.maskedinput.js" defer></script>
+  <script src="jquery.validate.min.js" defer></script>
+  <script src="validate.js" defer></script>
   <script src="script.js" defer></script>
   <script src="jquery.js" defer></script>
   <script src="accordion.js" defer></script>
@@ -35,19 +38,19 @@
 
         <ul class="nav_list">
           <li class="nav_item">
-            <a class="nav_link" href="#">HOME</a>
+            <a class="nav_link" href="#">ГОЛОВНА</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">ABOUT US</a>
+            <a class="nav_link" href="#">ПРО НАС</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">MOVIE</a>
+            <a class="nav_link" href="#">ВІДЕО</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">PRICE</a>
+            <a class="nav_link" href="#">ПРАЙС</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">CONTACTS</a>
+            <a class="nav_link" href="#">КОНТАКТИ</a>
           </li>
           <li class="nav_item">
             <!-- <ul class="lang_list_header">
@@ -91,19 +94,19 @@
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
         <div class="banner_content">
-          <p class="banner_text">My Dance for You! If You wanted amazing and bright show, follow the link and fill out the form?!</p>
-          <button class="btn btn_banner" onclick="forma()">Fill the Form</button>
+          <p class="banner_text">"My Dance" для Вас! Якщо Ви хотіли дивовижного та яскравого шоу, переходьте за посиланням та заповнюйте форму?!</p>
+          <button class="btn btn_banner" onclick="forma()">Заповнити форму</button>
         </div>
       </div>
     </main>
     <section class="about_us">
       <div class="studio_information">
         <div class="about_us_header">
-          <p class="about_us_text"> Hello! We are studio "MY DANCE". We so yang studio, but we can present so good show. Studio have many professional artist with good skills, this tem have experiance in many country. What we can give you?-Kontemp,acrobatic, circus discipline, we give you many emotionals and you dont forget us!</p>
+          <p class="about_us_text">Привіт! Ми студія "MY DANCE". Студія має багато професійних викладачів з хорошими навичками. Що ми можемо Вам подарувати?-Контемп,акробатика,циркова дисципліна, ми даруємо вам багато не забутніх емоцій!</p>
         </div>
         <div class="slide_movie">
         <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/O14P2PMtYoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- </video> --> -->
         </div>
       </div>
@@ -111,17 +114,27 @@
     <section class="deals">
       <div class="programs_price">
         <ul class="programs">
-          <li class="programs_art">Dance</li>
-          <li class="programs_art">Animators</li>
-          <li class="programs_art">Circue show</li>
-          <li class="programs_art">Led Show</li>
+          <li class="programs_art">Контемп</li>
+          <li class="programs_art">Акробатика</li>
+          <li class="programs_art">Художня гімнастика</li>
+          <li class="programs_art">Stretching</li>
         </ul>
+
+        <!-- <div class="price_days">
+          <ul class="days">
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+          </ul>
+        </div> -->
+        
         <div class="price_block">
           <ul class="price">
-            <li class="price_art">200$</li>
-            <li class="price_art">70$</li>
-            <li class="price_art">300$</li>
-            <li class="price_art">200$</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
           </ul>
         </div>
 
@@ -141,9 +154,9 @@
       </div>
       <div class="flex-slide home">
     
-        <div class="flex-title flex-title-home">Contemp</div>
+        <div class="flex-title flex-title-home">Контемп</div>
         <div class="flex-about flex-about-home">
-          <p> - is a genre of dance performance that developed during the mid-twentieth century and has since grown to become one of the dominant genres for formally trained dancers throughout the world, with particularly strong popularity in the U.S. and Europe.</p>
+          <p> - це жанр танцювального перформансу, який розвинувся в середині двадцятого століття і з тих пір став одним з домінуючих жанрів для формально підготовлених танцюристів у всьому світі, з особливою популярністю в США та Європі.</p>
 
           <div class="flex_slide_movie">
             <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
@@ -158,46 +171,48 @@
         <div class="popup1_body">
           <div class="popup1_content">
             <a href="" class="popup1_close">X</a>
-            <div class="poup1_title">Modal window</div>
+            <div class="poup1_title">Контемп</div>
             <div class="poup1_text">
-              <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/O14P2PMtYoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
+
       <div class="flex-slide about">
-        <div class="flex-title">Acrobatic</div>
+        <div class="flex-title">Акробатика</div>
         <div class="flex-about">
-          <p> - is the performance of human feats of balance, agility, and motor coordination.</p>
+          <p>- це виконання людиною вправ на рывновагу, спритності та координації рухів.</p>
           <div class="flex_slide_movie">
             <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
             <div class="contemp1">
-              <a href="#popup1" class="picture1"><img src="asset/acro.jpg" alt=""></a>
+              <a href="#popup2" class="picture1"><img src="asset/acro.jpg" alt=""></a>
             </div>
             <!-- </video> -->
           </div>
         </div>
       </div>
-      <div id="popup1" class="popup1">
+      <div id="popup2" class="popup1">
         <div class="popup1_body">
           <div class="popup1_content">
             <a href="" class="popup1_close">X</a>
-            <div class="poup1_title">Modal window</div>
+            <div class="poup1_title">Акробатика</div>
             <div class="poup1_text">
               <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         </div>
       </div>
+
       <div class="flex-slide work">
-        <div class="flex-title">Gymnastics</div>
+        <div class="flex-title">Художня Гімнастика</div>
         <div class="flex-about">
-          <p> - is a sport that includes physical exercises requiring balance, strength, flexibility, agility, coordination, and endurance.</p>
+          <p> - це вид спорту, що включає фізичні вправи, що вимагають рівноваги, сили, гнучкості, спритності, координації та витривалості.</p>
 
           <div class="flex_slide_movie">
             <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
             <div class="contemp1">
-              <a href="#popup1" class="picture1"><img src="asset/gymnastics.jpg" alt=""></a>
+              <a href="#popup3" class="picture1"><img src="asset/gymnastics.jpg" alt=""></a>
             </div>
           <!-- <ul>
             <li>First piece of work</li>
@@ -207,11 +222,11 @@
         </div>
       </div>
 
-      <div id="popup1" class="popup1">
+      <div id="popup3" class="popup1">
         <div class="popup1_body">
           <div class="popup1_content">
             <a href="" class="popup1_close">X</a>
-            <div class="poup1_title">Modal window</div>
+            <div class="poup1_title">Художня гімнастика</div>
             <div class="poup1_text">
               <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -223,12 +238,12 @@
       <div class="flex-slide contact">
         <div class="flex-title">Stretching</div>
         <div class="flex-about">
-          <p> - is a form of physical exercise in which a specific muscle or tendon (or muscle group) is deliberately flexed or stretched in order to improve the muscle's felt elasticity and achieve comfortable muscle tone.</p>
+          <p> - це форма фізичної вправи, при якій певний м'яз або сухожилля (або група м'язів) навмисно згинається або розтягується з метою покращення відчутної еластичності м'язів і досягнення комфортного м'язового тонусу.</p>
 
           <div class="flex_slide_movie">
             <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
             <div class="contemp1">
-              <a href="#popup1" class="picture1"><img src="asset/stretching.jpg" alt=""></a>
+              <a href="#popup4" class="picture1"><img src="asset/stretching.jpg" alt=""></a>
             </div>
 
           <!-- <form class="contact-form">
@@ -245,11 +260,11 @@
         </div>
       </div>
     </div>
-      <div id="popup1" class="popup1">
+      <div id="popup4" class="popup1">
         <div class="popup1_body">
           <div class="popup1_content">
-            <a href="" class="popup1_close"></a>
-            <div class="poup1_title">Modal window</div>
+            <a href="" class="popup1_close">Х</a>
+            <div class="poup1_title">Stretching</div>
             <div class="poup1_text">
               <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -299,11 +314,11 @@
         </a>
         <h3 class="title_form">Recall me</h3>
         <p class="text_form">Send your massege and we call you</p>
-        <form>
-          <input type="text" name="name" placeholder="Your name">
-          <input type="text" name="name" placeholder="Your number phone">
-          <input type="text" name="name" placeholder="Your E-mail">
-          <input type="text" name="name" placeholder="What do you wanted see in your holliday?">
+        <form action="send.php" method="post">
+          <input type="text" class="name" name="name" placeholder="Your name" required>
+          <input type="text" class="phone" name="phone" placeholder="Your number phone" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <textarea name="text" id="" cols="30" rows="10" placeholder="What do you wanted see in your holliday?"></textarea>
           <input class="btn_form" type="submit" value="Send">
         </form>
       </div>
