@@ -302,7 +302,7 @@ color: #EFCC70;
     white-space: nowrap;
     text-align: center;
     transition: 0.2s linear;
-    font-size: 16px;
+    font-size: 12px;
   }
   .btn_banner {
     position: absolute;
@@ -1113,5 +1113,15 @@ textarea {
     color: #014743;
     background-color: #EFCC70;
     font-size: 22px;
+  }
+  textarea {
+    display: block;
+    margin: 0 auto 15px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 15px 25px;
+    resize: none;
   }
 }
