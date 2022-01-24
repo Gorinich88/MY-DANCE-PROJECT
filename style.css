@@ -327,18 +327,29 @@ color: #EFCC70;
   height: 100%;
 }
 .slide_movie {
-  height: 500px;
+  /* height: 500px; */
   text-align: center;
+  width: 100%;
   font-size: 18px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 56.25%;
+  /* padding-bottom: 20px; */
   background: #000;
+  position: relative;
 }
 .slide_movie iframe {
+  /* display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; */
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  position: absolute;
+  object-fit: contain;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 .about_us_header {
   padding: 15px 64px 15px 67px;
@@ -382,7 +393,7 @@ color: #EFCC70;
     font-weight: 300;
     color: #fff;
   }
-  .slide_movie {
+  /* .slide_movie {
     height: 100%;
     text-align: center;
     font-size: 18px;
@@ -394,8 +405,8 @@ color: #EFCC70;
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
+    object-fit: contain;
+  } */
 }
 
 
