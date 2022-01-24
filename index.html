@@ -6,115 +6,324 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo:wght@600&family=Merienda+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous" defer></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.waitforimages/2.2.0/jquery.waitforimages.min.js" defer></script> 
+  <script src="jquery.maskedinput.js" defer></script>
+  <script src="jquery.validate.min.js" defer></script>
+  <script src="validate.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="jquery.js" defer></script>
+  <script src="accordion.js" defer></script>
   <title>MY Dance</title>
 </head>
 <body>
   <div class="page">
     <header>
       <a class="logo" href="#">
-        <svg width="229.001" height="203.002" viewBox="0 0 229.001 203.002">
+        <svg class="logo_svg" width="229.001" height="203.002" viewBox="0 0 229.001 203.002">
           <path d="M6.7,203A6.692,6.692,0,0,1,0,196.325V6.681A6.7,6.7,0,0,1,6.7,0H222.307A6.7,6.7,0,0,1,229,6.681V196.325A6.694,6.694,0,0,1,222.307,203Zm4.018-10.684H218.289V10.687H10.713Zm125.51-41.134c0-11.54,7.391-19.233,18.427-19.233a22.194,22.194,0,0,1,11.249,3.1c.43.213.645.586.483.959l-3.536,7.427a.67.67,0,0,1-.068.167.7.7,0,0,1-.95.259,11.9,11.9,0,0,0-6.215-1.5c-4.819,0-8.035,3.527-8.035,8.816S150.793,160,155.612,160a11.9,11.9,0,0,0,6.215-1.5.956.956,0,0,1,.167-.067.7.7,0,0,1,.852.5l3.536,7.423c.161.376-.054.749-.483.963a22.191,22.191,0,0,1-11.249,3.1C143.613,170.414,136.223,162.724,136.223,151.184ZM63.1,169.565a.485.485,0,0,1-.213-.646L75,133.446a1.624,1.624,0,0,1,1.286-.693H87.209a1.63,1.63,0,0,1,1.286.693l12.1,35.472a.5.5,0,0,1,.05.27.485.485,0,0,1-.533.426H89.51a1.247,1.247,0,0,1-1.122-.7l-1.61-5.608H76.709L75.1,168.919a1.252,1.252,0,0,1-1.126.7H63.37a.443.443,0,0,1-.052,0A.477.477,0,0,1,63.1,169.565ZM78.85,155.67h5.787l-2.892-10.148Zm53.569,13.945h-9.268a1.464,1.464,0,0,1-1.125-.7l-9.32-16.612v16.559a.777.777,0,0,1-.806.749h-9.48a.762.762,0,0,1-.748-.749V133.556a.775.775,0,0,1,.748-.8h9.268a1.416,1.416,0,0,1,1.231.693l9.268,16.616V133.556a.817.817,0,0,1,.752-.8h9.509a.79.79,0,0,1,.776.8v35.309a.781.781,0,0,1-.779.75Zm37.764,0c-.374,0-.748-.426-.855-.8V133.5a.6.6,0,0,1,0-.156.676.676,0,0,1,.748-.593h24.376a.828.828,0,0,1,.854.749v8.12a.8.8,0,0,1-.854.746H180.469v4.22h11.468a.641.641,0,0,1,.583.7l-.746,7.48a.94.94,0,0,1-.913.693H180.469V160h14.623a.768.768,0,0,1,.8.693v8.173a.818.818,0,0,1-.8.749Zm-136.7,0a.811.811,0,0,1-.747-.8V133.556a.809.809,0,0,1,.747-.8H45.909c11.354,0,18.908,7.32,18.908,18.431,0,11-7.555,18.431-18.908,18.431ZM43.764,160H46.55c4.125,0,6.909-3.527,6.909-8.816s-2.784-8.816-6.909-8.816H43.764Zm114.273-45.144a1.816,1.816,0,0,1-1.788-1.662V82.051L129.907,34.744c-.594-1.069.239-1.9,1.314-1.9h24.792a3.115,3.115,0,0,1,2.732,1.9l9.777,21.4,9.775-21.4a3.125,3.125,0,0,1,2.742-1.9h24.792c1.072,0,1.905.831,1.308,1.9L180.8,82.051v31.143a1.816,1.816,0,0,1-1.788,1.662Zm-55.187,0a1.808,1.808,0,0,1-1.784-1.662V78.247L89.028,113.073a3.61,3.61,0,0,1-2.98,1.783H72.938a3.607,3.607,0,0,1-2.98-1.783L57.918,78.247v34.947a1.809,1.809,0,0,1-1.787,1.662H34.081a1.7,1.7,0,0,1-1.674-1.662V34.627a1.728,1.728,0,0,1,1.674-1.783H58.993a5.024,5.024,0,0,1,4.051,2.376l16.45,45.407L95.941,35.22a5.022,5.022,0,0,1,4.053-2.376H124.9a1.726,1.726,0,0,1,1.667,1.783v78.567a1.7,1.7,0,0,1-1.667,1.662Z" fill="#ebce7d"/>
         </svg>
       </a>
       <div class="nav">
+
+        <div class="hamburger-menu">
+          <input id="menu_toggle" type="checkbox" />
+          <label class="menu_btn" for="menu_toggle">
+            <span></span>
+          </label>
+
         <ul class="nav_list">
           <li class="nav_item">
-            <a class="nav_link" href="#">ГЛАВНАЯ</a>
+            <a class="nav_link" href="#">ГОЛОВНА</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">О НАС</a>
+            <a class="nav_link" href="#">ПРО НАС</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">АРТИСТЫ</a>
+            <a class="nav_link" href="#">ВІДЕО</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">КАСТИНГ</a>
+            <a class="nav_link" href="#">ПРАЙС</a>
           </li>
           <li class="nav_item">
-            <a class="nav_link" href="#">КОНТАКТЫ</a>
+            <a class="nav_link" href="#">КОНТАКТИ</a>
           </li>
           <li class="nav_item">
-            <ul class="lang_list_header">
+            <!-- <ul class="lang_list_header">
               <li class="lang_item">
                 <a class="lang_link" href="#">EN</a>
               </li>
               <li class="lang_item">
                 <a class="lang_link" href="#">RU</a>
               </li>
-            </ul>
+            </ul> -->
           </li>
         </ul>
+        <!-- Burger menu -->
+        <div class="hamb">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
       </div>
     </header>
     <main class="picture_swiper">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="asset/60074248_2067978779994632_5181957701382438912_o.jpg" alt="">
+            <img src="asset/IMG_20211229_055119_607.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="asset/755242210112494.jpg" alt="">
+            <img src="asset/inst_10slides.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="asset/961337947_0_131_2500_1537_1920x0_80_0_0_14cdfbdccc8853001b26b54b9da9a4bf.jpg" alt="">
+            <img src="asset/aleks.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="asset/by-M-A-Lemire-2019-from-Show-Alegria-Cirque-du-Soleil-cover.jpg" alt="">
+            <img src="asset/IMG_20211229_055119_607.jpg" alt="">
           </div>
           <div class="swiper-slide">
-            <img src="asset/Цирк-Дю-Солей-Аватар-Toruk-1.jpg" alt="">
+            <img src="asset/IMG_20211229_055119_607.jpg" alt="">
           </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
         <div class="banner_content">
-          <p class="banner_text">My Dance for You! If You wanted amazing and bright show, follow the link and fill out the form?!</p>
-          <button href="#" class="btn btn_banner">APPLY</button>
+          <p class="banner_text">"My Dance" для Вас! Якщо Ви хотіли дивовижного та яскравого шоу, переходьте за посиланням та заповнюйте форму?!</p>
+          <button class="btn btn_banner" onclick="forma()">Заповнити форму</button>
         </div>
       </div>
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script src="script.js"></script>
     </main>
     <section class="about_us">
       <div class="studio_information">
         <div class="about_us_header">
-          <p class="about_us_text"> Hello! We are studio "MY DANCE". We so yang studio, but we can present so good show. Studio have many professional artist with good skills, this tem have experiance in many country. What we can give you?-Kontemp,acrobatic, circus discipline, we give you many emotionals and you dont forget us!</p>
+          <p class="about_us_text">Привіт! Ми студія "MY DANCE". Студія має багато професійних викладачів з хорошими навичками. Що ми можемо Вам подарувати?-Контемп,акробатика,циркова дисципліна, ми даруємо вам багато не забутніх емоцій!</p>
         </div>
         <div class="slide_movie">
-        <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted
-          <!-- <source src="movie/This Starts Today Cirque du Soleil Tour Stories   Episode 3   Cirque du Soleil.mp4">
-        </video> -->
+        <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/O14P2PMtYoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- </video> --> -->
         </div>
       </div>
-
     </section>
     <section class="deals">
       <div class="programs_price">
         <ul class="programs">
-          <li class="programs_art">Dance</li>
-          <li class="programs_art">Animators</li>
-          <li class="programs_art">Circue show</li>
-          <li class="programs_art">Led Show</li>
+          <li class="programs_art">Контемп</li>
+          <li class="programs_art">Акробатика</li>
+          <li class="programs_art">Художня гімнастика</li>
+          <li class="programs_art">Stretching</li>
         </ul>
+
+        <!-- <div class="price_days">
+          <ul class="days">
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+            <li class="days_art">12</li>
+          </ul>
+        </div> -->
+        
         <div class="price_block">
           <ul class="price">
-            <li class="price_art">200$</li>
-            <li class="price_art">70$</li>
-            <li class="price_art">300$</li>
-            <li class="price_art">200$</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
+            <li class="price_art">550грн (12 занять)</li>
           </ul>
         </div>
 
       </div>
 
     </section>
-    <footer></footer>
+
+
+    <div class="flex-container">
+      <div class="spinner">
+        <p>
+        
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+        Loading...
+        </p>
+      </div>
+      <div class="flex-slide home">
+    
+        <div class="flex-title flex-title-home">Контемп</div>
+        <div class="flex-about flex-about-home">
+          <p> - це жанр танцювального перформансу, який розвинувся в середині двадцятого століття і з тих пір став одним з домінуючих жанрів для формально підготовлених танцюристів у всьому світі, з особливою популярністю в США та Європі.</p>
+
+          <div class="flex_slide_movie">
+            <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
+            <div class="contemp1">
+              <a href="#popup1" class="picture1"><img src="asset/contemp.jpg" alt=""></a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div id="popup1" class="popup1">
+        <div class="popup1_body">
+          <div class="popup1_content">
+            <a href="" class="popup1_close">X</a>
+            <div class="poup1_title">Контемп</div>
+            <div class="poup1_text">
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/O14P2PMtYoM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-slide about">
+        <div class="flex-title">Акробатика</div>
+        <div class="flex-about">
+          <p>- це виконання людиною вправ на рывновагу, спритності та координації рухів.</p>
+          <div class="flex_slide_movie">
+            <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
+            <div class="contemp1">
+              <a href="#popup2" class="picture1"><img src="asset/acro.jpg" alt=""></a>
+            </div>
+            <!-- </video> -->
+          </div>
+        </div>
+      </div>
+      <div id="popup2" class="popup1">
+        <div class="popup1_body">
+          <div class="popup1_content">
+            <a href="" class="popup1_close">X</a>
+            <div class="poup1_title">Акробатика</div>
+            <div class="poup1_text">
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-slide work">
+        <div class="flex-title">Художня Гімнастика</div>
+        <div class="flex-about">
+          <p> - це вид спорту, що включає фізичні вправи, що вимагають рівноваги, сили, гнучкості, спритності, координації та витривалості.</p>
+
+          <div class="flex_slide_movie">
+            <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
+            <div class="contemp1">
+              <a href="#popup3" class="picture1"><img src="asset/gymnastics.jpg" alt=""></a>
+            </div>
+          <!-- <ul>
+            <li>First piece of work</li>
+            <li>Second piece of work</li>
+            <li>Third piece of work</li>
+          </ul> -->
+        </div>
+      </div>
+
+      <div id="popup3" class="popup1">
+        <div class="popup1_body">
+          <div class="popup1_content">
+            <a href="" class="popup1_close">X</a>
+            <div class="poup1_title">Художня гімнастика</div>
+            <div class="poup1_text">
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>  
+
+      <div class="flex-slide contact">
+        <div class="flex-title">Stretching</div>
+        <div class="flex-about">
+          <p> - це форма фізичної вправи, при якій певний м'яз або сухожилля (або група м'язів) навмисно згинається або розтягується з метою покращення відчутної еластичності м'язів і досягнення комфортного м'язового тонусу.</p>
+
+          <div class="flex_slide_movie">
+            <!-- <video id="vid" autoplay="true" loop="true" controls poster="asset/logo.png" muted -->
+            <div class="contemp1">
+              <a href="#popup4" class="picture1"><img src="asset/stretching.jpg" alt=""></a>
+            </div>
+
+          <!-- <form class="contact-form">
+            <p>Email
+              <input type="text" name="email">
+            </p>
+            <p>Comment
+              <textarea type="text" name="comment" row="5"></textarea>
+            </p>
+            <p>
+              <input type="submit" name="email" value="Send Message">
+            </p>
+          </form> -->
+        </div>
+      </div>
+    </div>
+      <div id="popup4" class="popup1">
+        <div class="popup1_body">
+          <div class="popup1_content">
+            <a href="" class="popup1_close">Х</a>
+            <div class="poup1_title">Stretching</div>
+            <div class="poup1_text">
+              <iframe width="800" height="450" src="https://www.youtube.com/embed/jAsiLB4-yG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer_inner">
+        <div class="footer_left">
+          <ul class="footer_contact_list">
+            <li class="footer_contacts_item">
+              <div class="footer_contacts_title">Контакти</div>
+            </li>
+            <li class="footer_contacts_item"> Tel.
+              <a class="footer_cocntacts_link" href="Тел.:380979508465">+380979508465</a>
+            </li>
+            <li class="footer_contacts_item"> E-mail.
+              <a class="footer_cocntacts_link" href="mailto:hwarang88@inbox.ru">hwarang88@inbox.ru</a>
+            </li>
+            <li class="footer_contacts_item"> Адреса: вул.Небесної сотні 29/35 (5 поверх)
+            </li>
+          </ul>
+        </div>
+        <div class="footer_right">
+          <div class="social">
+            <a class="social_link" href="https://www.instagram.com/mydancekremenchug/" target="_blank">
+              <img class="social_icon" src="asset/Instagram_icon-icons.com_66804.svg" alt="insta">
+            </a>
+          </div>
+          <!-- <ul class="lang_list_footer">
+            <li class="lang_item_footer">
+              <a class="lang_link_footer" href="#">EN</a>
+            </li>
+            <li class="lang_item_footer">
+              <a class="lang_link_footer" href="#">RU</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </footer>
+    <div class="popups_inner">
+      <div class="popup callme_popup">
+        <a class="close_popup">
+          <svg class="close_popup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#fff;opacity:0;}.cls-2{fill:#EFCC70;}.cls-2:hover{fill:aqua}</style></defs><title>close</title><g id="Layer_2" data-name="Layer 2"><g id="close"><g id="close-2" data-name="close"><rect class="cls-1" width="24" height="24" transform="translate(24 24) rotate(180)"/><path class="cls-2" d="M13.41,12l4.3-4.29a1,1,0,1,0-1.42-1.42L12,10.59,7.71,6.29A1,1,0,0,0,6.29,7.71L10.59,12l-4.3,4.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L12,13.41l4.29,4.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42Z"/></g></g></g></svg>
+        </a>
+        <h3 class="title_form">Recall me</h3>
+        <p class="text_form">Send your massege and we call you</p>
+        <form action="send.php" method="post">
+          <input type="text" class="name" name="name" placeholder="Your name" required>
+          <input type="text" class="phone" name="phone" placeholder="Your number phone" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <textarea name="text" id="" cols="30" rows="10" placeholder="What do you wanted see in your holliday?"></textarea>
+          <input class="btn_form" type="submit" value="Send">
+        </form>
+      </div>
+    </div>
   </div>
+  
 </body>
 </html>
